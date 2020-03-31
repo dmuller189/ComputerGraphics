@@ -1,6 +1,6 @@
+  
 #version 330
 layout(location = 0) in vec3 position;
-<<<<<<< HEAD
 
 
 
@@ -10,9 +10,6 @@ layout(location=1) in vec2 textureCoords;
 
 
 
-=======
-in vec2 textureCoords;
->>>>>>> 2c934973a1ad905012aefd5903a948033482eb5c
 
 // We now have our camera system set up.
 uniform mat4 modelMatrix;

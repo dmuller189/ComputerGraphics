@@ -11,34 +11,34 @@
  */
 class BasicWidget : public QOpenGLWidget, protected QOpenGLFunctions
 {
-  Q_OBJECT
+    Q_OBJECT
 
 private:
-  QMatrix4x4 model_;
-  QMatrix4x4 view_;
-  QMatrix4x4 projection_;
-  
-  QElapsedTimer frameTimer_;
+    QMatrix4x4 model_;
+    QMatrix4x4 view_;
+    QMatrix4x4 projection_;
 
-  QVector<Renderable*> renderables_;
+    QElapsedTimer frameTimer_;
 
-  QOpenGLDebugLogger logger_;
+    QVector<Renderable*> renderables_;
+
+    QOpenGLDebugLogger logger_;
 
 protected:
-  // Required interaction overrides
-  void keyReleaseEvent(QKeyEvent* keyEvent) override;
+    // Required interaction overrides
+    void keyReleaseEvent(QKeyEvent* keyEvent) override;
 
-  // Required overrides form QOpenGLWidget
-  void initializeGL() override;
-  void resizeGL(int w, int h) override;
-  void paintGL() override;
+    // Required overrides form QOpenGLWidget
+    void initializeGL() override;
+    void resizeGL(int w, int h) override;
+    void paintGL() override;
 
-  Renderable* makeRenderable(QVector3D off);
-  
+    Renderable* makeRenderable(QVector3D off);
+
 public:
-  BasicWidget(QWidget* parent=nullptr);
-  virtual ~BasicWidget();
-  
-  // Make sure we have some size that makes sense.
-  QSize sizeHint() const {return QSize(800,600);}
+    BasicWidget(QWidget* parent = nullptr);
+    virtual ~BasicWidget();
+
+    // Make sure we have some size that makes sense.
+    QSize sizeHint() const { return QSize(800, 600); }
 };
