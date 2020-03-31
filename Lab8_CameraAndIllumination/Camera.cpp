@@ -27,6 +27,8 @@ QVector3D Camera::position() const
 void Camera::translateCamera(const QVector3D& delta)
 {
 	// TODO:  Implement camera translation
+	setPosition(position() + delta);
+	setLookAt(lookAt() + delta);
 }
 
 void Camera::setGazeVector(const QVector3D& gaze)
