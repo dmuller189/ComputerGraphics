@@ -8,6 +8,8 @@
     - Daniel Muller and Partner Jack Loar
 * How many hours did it take you to complete this Assignment? 
     - 8 hours
+	- As described in the instructions below, using brick wall lab 
+	as starter code to for this normal-map assignment
 * Did you collaborate or share ideas with any other students/TAs/Professors? 
 * Did you use any external resources? 
   * learnopengl.com
