@@ -89,7 +89,6 @@ void Renderable::init(const QVector<QVector3D>& positions, const QVector<QVector
 	// Create a temporary data array
 	float* data = new float[numVBOEntries];
 	for (int i = 0; i < numVerts; ++i) {
-		std::cout << "loading shit" << std::endl;
 		data[i * vertexSize_ + 0] = positions.at(i).x();
 		data[i * vertexSize_ + 1] = positions.at(i).y();
 		data[i * vertexSize_ + 2] = positions.at(i).z();
